@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <link rel="icon" href="" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="script.js">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Languo</title>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <nav class="navbar navbar-expand-md navbar-light bg-light"></nav>
+  <nav class="navbar navbar-expand-lg" style="background-color: white;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light ms-5 me-5" href="#">
+        <img class="logo" src="White Book Store Minimalist Logo.png" alt="">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fw-semibold me-2 text-dark" aria-current="page" href="#">O NÁS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold me-2 text-dark" href="#">SLUŽBY</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold me-2 text-dark" href="#">GALERIE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fw-semibold me-2 text-dark" href="#">KONTAKT</a>
+          </li>
+        </ul>
+        <div class="navbar-nav kosik ms-auto me-5">
+          <button class="btn me-4" type="button" data-bs-toggle="modal" data-bs-target="#basketModal">Košík<span class="badge badge-pill badge-primary cart-items-count ms-2">0</span></button>
+        </div>        
+        <button type="button" style="background-color:#92E3A9; color: white;" class="btn me-5">Přihlaste se</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="modal fade" id="basketModal" tabindex="-1" aria-labelledby="basketModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="basketModalLabel">Košík</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Produkt</th>
+                <th scope="col">Cena</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Items in the basket will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Pokračovat v nákupu</button>
+          <button type="button" class="btn btn-success">Platba</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="home" class="d-flex align-items-center min-vh-100 border-bottom" style="background-color: white;">
+    <div class="container home-text">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1 class="ms-4 display-3 fw-semibold">DOUČOVÁNÍ</h1>
+          <h2 class="ms-4 display-4 fw-medium" style="color: #92E3A9;">KTERÉ BAVÍ</h2>
+          <h3 class="ms-4">Jsme jazyková škola, která Vám pomůže dosáhnout vašich cílů a otevřít dveře k novým možnostem.</h3>
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#services" class="btn btn-lg ms-4 mt-3" style="background-color: #92E3A9; color: white;" id="zacit-btn">Začít</a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-md-last home-img ms-5 ms-md-auto">
+          <img src="Webinar-amico.png" class="img-fluid home-img" alt="">
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <section id="services" class="pt-5 min-vh-100 pb-5" style="background-color: whitesmoke; margin: 0 auto;" id="home">
+    <div class="container" style="margin: 0 auto;">
+      <div class="row gy-6 mt-4 justify-content-center">
+
+        <h3 class="ms-4 justify-content-center fw-medium d-flex mb-5">MÁTE NA VÝBĚR Z MNOHO JAZYKŮ</h3>
+
+        <div class="card h-100 w-25 me-3 mb-5">
+          <img src="https://www.vlajky.eu/vlajky/62/fr.jpg" class="card-img-top pt-3 rounded-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">FRANCOUŠTINA</h5>
+            <p class="card-text"></p>
+            <button class="btn" style="background-color: #92E3A9; color: white;" data-bs-toggle="modal" data-bs-target="#francoustina">KOUPIT</button>
+          </div>
+        </div>      
+        
+        <div class="modal fade" id="francoustina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Přidat do košíku</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Jste si jisti, že chcete přidat produkt "FRANCOUŠTINA" do košíku?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušit</button>
+                <button type="button" class="btn btn-success">Přidat do košíku</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="card h-100 w-25 me-3">
+          <img src="https://www.vlajky.eu/vlajky/93/gb.jpg" class="card-img-top pt-3 rounded-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ANGLIČTINA</h5>
+            <p class="card-text"></p>
+            <button type="button" class="btn" style="background-color: #92E3A9; color: white;" data-bs-toggle="modal" data-bs-target="#anglictina">KOUPIT</button>
+          </div>
+        </div>
+        
+        <div class="modal fade" id="anglictina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Přidat do košíku</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Jste si jisti, že chcete přidat produkt "ANGLIČTINA" do košíku?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušit</button>
+                <button type="button" class="btn btn-success">Přidat do košíku</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card h-100 w-25 me-3">
+          <img src="https://www.vlajky.eu/vlajky/476/es.jpg" class="card-img-top pt-3 rounded-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ŠPANĚLŠTINA</h5>
+            <p class="card-text"></p>
+            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#spanelstina" style="background-color: #92E3A9; color: white;">KOUPIT</button>
+          </div>
+        
+          <!-- Modal -->
+          <div class="modal fade" id="spanelstina" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Přidat do košíku</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Jste si jisti, že chcete přidat produkt "ŠPANĚLŠTINA" do košíku?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušit</button>
+                  <button type="button" class="btn btn-success">Přidat do košíku</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="card h-100 w-25 me-3">
+          <img src="https://www.vlajky.eu/vlajky/77/de.jpg" class="card-img-top pt-3 rounded-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">NĚMČINA</h5>
+            <p class="card-text"></p>
+            <button type="button" class="btn" style="background-color: #92E3A9; color: white;" data-bs-toggle="modal" data-bs-target="#nemcinaModal">KOUPIT</button>
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="nemcinaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Přidat do košíku</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Jste si jisti, že chcete přidat produkt "NĚMČINA" do košíku?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušit</button>
+                <button type="button" class="btn btn-success">Přidat do košíku</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card h-100 w-25 me-3">
+          <img src="https://www.vlajky.eu/vlajky/226/cn.jpg" class="card-img-top pt-3 rounded-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">ČÍNŠTINA</h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn" style="background-color: #92E3A9; color: white;" data-bs-toggle="modal" data-bs-target="#cinstina-modal">KOUPIT</a>
+          </div>
+        </div>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="cinstina-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Přidat do košíku</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Jste si jisti, že chcete přidat produkt "ČÍNŠTINA" do košíku?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušit</button>
+                <button type="button" class="btn btn-success">Přidat do košíku</button>
+              </div>
+            </div>
+          </div>
+        </div>        
+
+        <div class="card h-100 w-25 me-3">
+          <img src="https://shop.alerion.cz/sites/default/files/produkty/venkovni-tistene-portugalsko-1v.jpg" class="card-img-top pt-3 rounded-3" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">PORTUGALŠTINA</h5>
+            <p class="card-text"></p>
+            <a href="#" class="btn" style="background-color: #92E3A9; color: white;" data-bs-toggle="modal" data-bs-target="#portugalstinaModal">KOUPIT</a>
+          </div>
+        
+          <!-- Modal -->
+          <div class="modal fade" id="portugalstinaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Přidat do košíku</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  Jste si jisti, že chcete přidat produkt "PORTUGALŠTINA" do košíku?
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zrušit</button>
+                  <button type="button" class="btn btn-success">Přidat do košíku</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-5 min-vh-100" style="background-color: white;" id="project">
+    <div class="container" style="margin: 0 auto;">
+      <div class="row gy-6 mt-4">
+        <div class="col-6">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGxlYXJuaW5nJTIwbGFuZ3VhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1518457900604-5c973dffdedf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTZ8fGxlYXJuaW5nJTIwbGFuZ3VhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGxlYXJuaW5nJTIwbGFuZ3VhZ2V8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div> 
+        </div>
+  </section>
+
+  <footer style="text-align:center;">
+    <p>&copy; 2023 Languo. Všechna práva vyhrazena.</p>
+  </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  </body>
+</html>

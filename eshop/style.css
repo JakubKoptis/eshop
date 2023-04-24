@@ -1,0 +1,113 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+.logo {
+    width: 50px;
+}
+
+.nav-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #92E3A9;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.2s, transform 0.4s ease-out;
+}
+
+.nav-link:hover::before,
+.nav-link:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+
+.nav-link:hover {
+color: black !important;
+}
+
+.nav-link {
+    text-decoration: none;
+    margin-right: 50px;
+    position: relative;
+    padding: 16px 0;
+    margin: 0 5px;
+    letter-spacing: 1px;
+    line-height: 16px;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s ease-in;
+}
+
+.card {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.card-img-top {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    
+}
+
+.home-img {
+    width: 470px;
+    margin-left: 50px;
+}
+
+.home-text {
+    margin-top: -100px;
+    margin-left: 30px;
+}
+
+.home {
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background: url(Webinar-amico.png);
+    background-size: center;
+    background-position: center;
+
+}
+
+.card-img-top {
+    position: relative;
+}
+
+#services {
+    position: relative;
+  }
+  
+  #services h3 {
+    position: relative;
+    display: inline-block;
+}
+  
+  #services h3::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 3px solid #92E3A9;
+    width: 100px;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  } 
